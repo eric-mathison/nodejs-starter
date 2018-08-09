@@ -59,3 +59,15 @@ typings/
 
 # next.js build output
 .next
+
+# Compiled directories
+dist/
+
+# Project specific files
+googleapikey.json
+
+# VSCode Debugging
+.vscode/
+
+# SSL
+.well-known/
