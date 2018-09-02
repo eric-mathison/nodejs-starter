@@ -2,18 +2,19 @@
     "name": "nodejs-starter",
     "version": "1.0.0",
     "description": "Starter framework for NodeJS Apps",
-    "main": "dist/index.js",
-    "author": "Eric Mathison <eric@mathisonmedia.com>",
+    "main": "lib/index.js",
+    "author": "Eric Mathison <eric.l.mathison@gmail.com>",
+    "repository": "git@github.com:eric-mathison/nodejs-starter.git",
     "license": "MIT",
     "private": true,
     "scripts": {
-        "start": "node dist/server.js",
-        "babel": "babel src -d dist --ignore .min.js",
-        "copy": "cpx \"src/public/js/**/*.min.js\" \"dist/public/js\" && cpx \"src/views/*\" \"dist/views\" && cpx \"src/*.json\" \"dist\" && cpx \"src/public/images/*\" \"dist/public/images\"",
+        "start": "node lib/index.js",
+        "build": "babel src -d lib --ignore .min.js",
+        "copy": "cpx \"src/public/js/**/*.min.js\" \"lib/public/js\" && cpx \"src/views/*\" \"lib/views\" && cpx \"src/*.json\" \"lib\" && cpx \"src/public/images/*\" \"lib/public/images\"",
+        "prepublish": "yarn lint && yarn test && yarn build",
         "lint": "eslint src test",
         "test": "mocha"
     },
-    "repository": "git@github.com:eric-mathison/nodejs-starter.git",
     "dependencies": {
         "winston": "^2.4.2"
     },
@@ -25,12 +26,15 @@
         "cpx": "^1.5.0",
         "eslint": "^4.19.1",
         "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-config-prettier": "^3.0.1",
         "eslint-plugin-import": "^2.11.0",
         "eslint-plugin-mocha": "^5.1.0",
+        "eslint-plugin-prettier": "^2.6.2",
         "husky": "^1.0.0-rc.13",
         "lint-staged": "^7.2.0",
         "mocha": "^5.2.0",
-        "prettier": "^1.14.2"
+        "prettier": "^1.14.2",
+        "sinon": "^6.1.5"
     },
     "husky": {
         "hooks": {
