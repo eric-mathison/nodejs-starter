@@ -1,15 +1,19 @@
-import winston from 'winston';
+const { createLogger, format, transports } = require('winston');
+const keys = require('./keys');
 
-const level = process.env.LOG_LEVEL || 'debug';
+const level = keys.logLevel;
 
-const logger = new winston.Logger({
+const logger = createLogger({
+    format: format.combine(
+        format.timestamp(),
+        format.colorize(),
+        format.simple()
+    ),
     transports: [
-        new winston.transports.Console({
+        new transports.Console({
             level,
-            colorize: true,
-            timestamp: () => new Date().toISOString(),
         }),
     ],
 });
 
-export default logger;
+module.exports = logger;

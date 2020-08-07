@@ -1,9 +1,9 @@
-import chai, { expect } from 'chai';
-import sinon from 'sinon';
+const chai = require('chai');
+const chaiHttp = require('chai-http');
 
-const should = chai.should();
+const { expect } = chai;
 
 global.chai = chai;
-global.should = should;
 global.expect = expect;
-global.sinon = sinon;
+
+chai.use(chaiHttp);

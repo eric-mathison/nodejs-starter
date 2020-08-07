@@ -1,6 +1,6 @@
 # nodejs-starter
 
-Starter framework for NodeJS Apps
+Starter framework for NodeJS Express Apps
 
 ## Install
 
@@ -10,10 +10,6 @@ Starter framework for NodeJS Apps
 
 ```
 npm test
-```
-
-```
-yarn test
 ```
 
 ## License
