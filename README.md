@@ -1,6 +1,4 @@
-# nodejs-starter
-
-Starter framework for NodeJS Express Apps
+# NodeJS Starter Kit
 
 ## Install
 

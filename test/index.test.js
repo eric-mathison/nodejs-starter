@@ -2,7 +2,7 @@
 const app = require('../src');
 
 describe('Get /', () => {
-    it('should resolve', done => {
+    it('should resolve', (done) => {
         chai.request(app)
             .get('/')
             .end((err, res) => {
