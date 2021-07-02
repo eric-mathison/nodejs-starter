@@ -1,5 +1,7 @@
 # NodeJS Starter Template
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/eric-mathison/nodejs-starter/Node.js%20CI?style=for-the-badge)
+
 This is a starter template for creating a simple Express REST API Server that supports logging, cookie sessions, and cors.
 
 ## Install
