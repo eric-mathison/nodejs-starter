@@ -1,9 +1,9 @@
-name: Node.js CI
+name: Test
 
 on:
     push:
         branches:
-            - main
+            - master
 
 jobs:
     test:
