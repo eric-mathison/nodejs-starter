@@ -1,6 +1,6 @@
 {
     "name": "nodejs-starter",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Starter framework for NodeJS Express Apps",
     "main": "lib/index.js",
     "author": "Eric Mathison <eric.l.mathison@gmail.com>",
@@ -14,19 +14,16 @@
         "test": "NODE_ENV='test' MUTE_MORGAN=on mocha --exit"
     },
     "dependencies": {
-        "cookie-parser": "^1.4.5",
         "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
         "express": "^4.17.1",
-        "express-session": "^1.17.1",
-        "memorystore": "^1.6.2",
         "morgan": "^1.10.0",
-        "serve-favicon": "^2.5.0",
         "winston": "^3.3.3"
     },
     "devDependencies": {
         "chai": "^4.2.0",
         "chai-http": "^4.3.0",
-        "eslint": "^7.6.0",
+        "eslint": "^8.53.0",
         "eslint-config-airbnb-base": "^14.1.0",
         "eslint-config-prettier": "^6.11.0",
         "eslint-plugin-import": "^2.20.2",

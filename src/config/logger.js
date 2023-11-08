@@ -1,7 +1,6 @@
 const { createLogger, format, transports } = require('winston');
-const keys = require('./keys');
 
-const level = keys.logLevel;
+const level = process.env.LOG_LEVEL || 'info';
 
 const logger = createLogger({
     format: format.combine(
