@@ -2,7 +2,7 @@ const logger = require('../config/logger');
 
 const authenticateKey = (req, res, next) => {
     const apiKey = req.header('api-key');
-    if (apiKey === process.env.API_KEY) {
+    if (process.env.API_KEY && apiKey === process.env.API_KEY) {
         logger.info('API Called');
         next();
     } else {
